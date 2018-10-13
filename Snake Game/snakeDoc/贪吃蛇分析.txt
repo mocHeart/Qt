@@ -1,0 +1,59 @@
+代码组成分析：
+mainWidget类：
+成员函数：
+    1、初始化函数（构造函数： mainWidget）
+    2、释放动态空间（析构函数：~GameWidget）  
+    3、退出槽函数（exitSlot）
+    4、开始槽函数（startSlot）
+私有成员：
+    1、QPushButton
+	startbtn
+	exitbtn
+    2、GameWidget
+	g
+    3、QLabel
+	label
+GameWidget类：
+成员函数： 
+    1、初始化函数（构造函数： GameWidget）
+    2、释放动态空间（析构函数：~GameWidget）
+    3、自定义向上按钮槽函数（upbtnSlot）
+    4、自定义向下按钮槽函数（downbtnSlot）
+    5、自定义向左按钮槽函数（leftbtnSlot）
+    6、自定义向右按钮槽函数（rightbtnSlot）
+    7、自定义开始按钮槽函数（startbtnSlot）
+    8、自定义返回按钮槽函数（returnbtnSlot）
+    9、自定义定时器时间溢出按钮槽函数（timeoutSlot）
+    10、重写绘图事件函数（paintEvent）
+    11、重写按键事件函数（keyPressEvent）
+自定义信号：
+    1、UpSignal()
+    2、DownSignal()
+    3、LeftSignal()
+    4、RightSignal()
+私有成员：
+    1、QPushButton:  
+	upbtn
+	leftbtn
+	downbtn
+	rightbtn
+	startbtn
+	returnbtn
+    2、QLabel:
+	scorelabel
+	levellabel
+	scoreshow
+	levelshow
+    3、QSound
+	sound
+	sound1
+    4、QTimer
+	timer
+    5、int
+	direction
+	snake[100][2]
+	snake1[100][2]
+	foodcount
+	foodx, foody
+	score
+	level
